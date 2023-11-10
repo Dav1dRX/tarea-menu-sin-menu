@@ -1,4 +1,4 @@
-Funcion menu_sin_menu
+
 	//DAVIIIIIIIID----------------------------------------------------------------------------------------------------------
 	Funcion  colas
 		definir cant Como Entero
@@ -30,7 +30,7 @@ Funcion uvas
 	Escribir "     ----------------------------------------------------------"
 	Escribir "DE que tipo de uva quieres tu pedido [A O B] ?"
 	Leer tiuva
-	Escribir "de que tamaño quieres llevar [ 1 o 2 ]?"
+	Escribir "de que tamaÃ±o quieres llevar [ 1 o 2 ]?"
 	Leer tamuva
 	Escribir "ingrese el precio por kilo"
 	leer preciou
@@ -60,7 +60,7 @@ Funcion uvas
 	Escribir "Su pedido:"
 	Escribir " "
 	Escribir "tipo de entrega:         ", juan
-	Escribir "tamaño:                  ", tamuva
+	Escribir "tamaÃ±o:                  ", tamuva
 	Escribir "precio por kilo:         ", preciou," $"
 	Escribir "cantidad:                ", cant
 	Escribir "---------------------------------"
@@ -299,7 +299,7 @@ Funcion numero_loco
 FinFuncion
 //-------------------------------------------------------------------------------------------------------
 Funcion fruta_sabrosa_comotu
-	Definir tipo, tamaño Como Caracter
+	Definir tipo, tamaÃ±o Como Caracter
 	Definir cant Como Entero
 	Escribir "           ---------------------------------------------"
 	Escribir "             --DISTRIBUIDORA DE PITAHAYA FALCO RICO--"
@@ -313,15 +313,15 @@ Funcion fruta_sabrosa_comotu
 	Leer tipo 
 	mino = Minusculas(tipo)
 	
-	Escribir "ingresa el tamaño del pedido [ 1 o 2 ] "
-	Leer tamaño 
+	Escribir "ingresa el tamaÃ±o del pedido [ 1 o 2 ] "
+	Leer tamaÃ±o 
 	
 	total = precio * cant
 	si mino = "a" Entonces
 		mino = "Amarilla"
-		si tamaño = "1" Entonces
+		si tamaÃ±o = "1" Entonces
 			final = total + 10 
-		sino si tamaño = "2" Entonces
+		sino si tamaÃ±o = "2" Entonces
 				poor = (total * 15 / 100 ) + 5
 				final = total + poor 
 			FinSi
@@ -329,9 +329,9 @@ Funcion fruta_sabrosa_comotu
 	FinSi	
 	si mino = "c" Entonces
 		mino = "Colorada"
-		si tamaño = "1" Entonces
+		si tamaÃ±o = "1" Entonces
 			final = total - 20 
-		sino si tamaño = "2" Entonces
+		sino si tamaÃ±o = "2" Entonces
 				poor = (total * 20 / 100 )
 				final =  total - poor
 			FinSi
@@ -349,14 +349,14 @@ Funcion fruta_sabrosa_comotu
 	Escribir "Precio por kilo:          ", precio
 	Escribir "Cantidad de compra:       ", cant
 	Escribir "tipo de paquete:          ",mino
-	Escribir "tamaño:                   ",tamaño
+	Escribir "tamaÃ±o:                   ",tamaÃ±o
 	Escribir "precio total:             ",total
 	Escribir "---------------------------------------"
 	Escribir "descuento 5%:             ",descuu
 	Escribir "precio final IVA 12%:     ",IVA
 	
 	
-	si tipo   <> "a" Y tipo   <> "c" o tamaño  <> "1"  Y tamaño  <> "2" Entonces
+	si tipo   <> "a" Y tipo   <> "c" o tamaÃ±o  <> "1"  Y tamaÃ±o  <> "2" Entonces
 		Escribir " " 
 		Escribir "> ERROR TIENE QUE INGRESAR LOS VALORES CORRECTOS"
 	FinSi
@@ -365,10 +365,10 @@ FinFuncion
 
 //MINUCHE....................................................................................................................
 
-// Pedir al usuario un número y mostrar si es par menor que 10, sino mostrar si es negativo e impar o negativo divisible para 5.
+// Pedir al usuario un nÃºmero y mostrar si es par menor que 10, sino mostrar si es negativo e impar o negativo divisible para 5.
 funcion EJC_11
 	Definir numero, resultado Como Entero
-	Escribir "Ingrese un número: "
+	Escribir "Ingrese un nÃºmero: "
 	Leer numero
 	// proceso de datos
 	Si (numero % 2 = 0) Y (numero < 10) Entonces
@@ -381,23 +381,23 @@ funcion EJC_11
 	FinSi
 	Segun resultado
 		Caso 1:
-			Escribir "El número es par y menor que 10."
+			Escribir "El nÃºmero es par y menor que 10."
 		Caso 2:
-			Escribir "El número es negativo e impar o negativo divisible por 5."
+			Escribir "El nÃºmero es negativo e impar o negativo divisible por 5."
 		Caso 3:
-			Escribir "El número no cumple ninguna de las condiciones anteriores."
+			Escribir "El nÃºmero no cumple ninguna de las condiciones anteriores."
 	FinSegun
 FinFuncion
 //.........................................................................................................................................................................
-// Fábricas "El cometa" produce artículos con claves (1, 2, 3, 4, 5 y 6). Se requiere un algoritmo para calcular los precios de venta, para esto hay que
-// considerar lo siguiente: Costo de producción = materia prima + mano de obra + gastos de fabricación. Precio de venta = costo de producción + 45 % de costo de producción.
+// FÃ¡bricas "El cometa" produce artÃ­culos con claves (1, 2, 3, 4, 5 y 6). Se requiere un algoritmo para calcular los precios de venta, para esto hay que
+// considerar lo siguiente: Costo de producciÃ³n = materia prima + mano de obra + gastos de fabricaciÃ³n. Precio de venta = costo de producciÃ³n + 45 % de costo de producciÃ³n.
 // El costo de la mano de obra se obtiene de la siguiente forma: para los productos con clave 3 o 4 se carga 75 % del costo de la materia prima; para los que tienen clave 1 o 5
-// se carga 80 %, y para los que tienen clave 2 o 6, 85 %. Para calcular el gasto de fabricación se considera que, si el artículo que se va a producir tiene claves 2 o 5, este 
+// se carga 80 %, y para los que tienen clave 2 o 6, 85 %. Para calcular el gasto de fabricaciÃ³n se considera que, si el artÃ­culo que se va a producir tiene claves 2 o 5, este 
 // gasto representa 30 % sobre el costo de la materia prima; si las claves son 3 o 6, representa 35 %; si las claves son 1 o 4, representa 28 %. La materia prima tiene el mismo costo para cualquier clave.
 funcion EJC_12
 	// entrada de datos
 	Definir clave, costoMateriaPrima, costoManoDeObra, costoGastosFabricacion, costoProduccion, precioVenta Como Real
-	Escribir "Ingrese la clave del artículo (1, 2, 3, 4, 5 o 6): "
+	Escribir "Ingrese la clave del artÃ­culo (1, 2, 3, 4, 5 o 6): "
 	Leer clave
 	Escribir "Ingrese el costo de la materia prima: "
 	Leer costoMateriaPrima
@@ -419,14 +419,14 @@ funcion EJC_12
 	FinSi
 	costoProduccion = costoMateriaPrima + costoManoDeObra + costoGastosFabricacion
 	precioVenta = costoProduccion + 0.45 * costoProduccion
-	Escribir "El precio de venta del artículo con clave ", clave, " es: ", precioVenta
+	Escribir "El precio de venta del artÃ­culo con clave ", clave, " es: ", precioVenta
 FinFuncion
 //.........................................................................................................................................................................
-// Dado un número entero N, calcular e informar al usuario cuántos dígitos tiene dicho número
+// Dado un nÃºmero entero N, calcular e informar al usuario cuÃ¡ntos dÃ­gitos tiene dicho nÃºmero
 FUNCION EJC_13
 	// entrada de datos
 	Definir contador Como entero
-	Escribir "Ingrese un número entero: "
+	Escribir "Ingrese un nÃºmero entero: "
 	Leer N
 	contador = 0
 	// proceso de datos
@@ -434,23 +434,23 @@ FUNCION EJC_13
 		N = N / 10
 		contador = contador + 1
 	FinMientras
-	Escribir "El número tiene ", contador, " dígitos."
+	Escribir "El nÃºmero tiene ", contador, " dÃ­gitos."
 FinFuncion
 //...................................................................................................
-//  Dado un número, determine si es capicúa. 
+//  Dado un nÃºmero, determine si es capicÃºa. 
 FUNCION EJC_14
 	// entrada de datos
 	Escribir Sin Saltar "Ingresa el valor de un numero:";
     Leer un_numero;
 	// proceso de datos
 	Si un_numero>=10000 Entonces
-        Escribir "El número tiene más de 3 dígitos.";
+        Escribir "El nÃºmero tiene mÃ¡s de 3 dÃ­gitos.";
     FinSi
     Si un_numero<10000 Y (un_numero-un_numero MOD 100)/100 = un_numero MOD 10 Entonces
-        Escribir "El número sí es capicúa.";
+        Escribir "El nÃºmero sÃ­ es capicÃºa.";
     FinSi
     Si un_numero<10000 Y (un_numero-un_numero MOD 100)/100 <> un_numero MOD 10 Entonces
-        Escribir "El número no es capicúa.";
+        Escribir "El nÃºmero no es capicÃºa.";
     FinSi
 	// salida de los resultados
 FinFuncion
@@ -459,7 +459,7 @@ FinFuncion
 // Escribir un algoritmo que presente los divisores de un numero
 funcion EJC_15
 	Definir numero, divisor Como Entero
-	Escribir "Ingrese un número: "
+	Escribir "Ingrese un nÃºmero: "
 	Leer numero
 	Escribir "Los divisores de ", numero, " son:"
 	// proceso de datos
@@ -470,10 +470,10 @@ funcion EJC_15
 	FinPara
 FinFuncion
 //...................................................................................................
-// Escribir un algoritmo que presenta la suma de los divisores de un número
+// Escribir un algoritmo que presenta la suma de los divisores de un nÃºmero
 FUNCION EJC_16
 	Definir numero, divisor, suma Como Entero
-	Escribir "Ingrese un número: "
+	Escribir "Ingrese un nÃºmero: "
 	Leer numero
 	suma = 0
 	Para divisor <- 1 Hasta numero Hacer
@@ -488,7 +488,7 @@ FinFuncion
 // Escribir un algoritmo que presente la cantidad de los divisores de un numero 
 FUNCION EJC_17
 	Definir numero, divisor, cantidad Como Entero	
-	Escribir "Ingrese un número: "
+	Escribir "Ingrese un nÃºmero: "
 	Leer numero
 	cantidad = 0
 	// proceso de datos
@@ -497,14 +497,14 @@ FUNCION EJC_17
 			cantidad = cantidad + 1
 		FinSi
 	FinPara
-	Escribir "El número ", numero, " tiene ", cantidad, " divisores."
+	Escribir "El nÃºmero ", numero, " tiene ", cantidad, " divisores."
 FinFuncion
 //...................................................................................................
-// Escribir un algoritmo que indique si un número es perfecto 
+// Escribir un algoritmo que indique si un nÃºmero es perfecto 
 FUNCION EJC_18
 	// entrada de datos
 	Definir numero, sumaDivisores, divisor Como Entero
-	Escribir "Ingrese un número: "
+	Escribir "Ingrese un nÃºmero: "
 	Leer numero
 	sumaDivisores = 0
 	// proceso de datos
@@ -514,19 +514,19 @@ FUNCION EJC_18
 		FinSi
 	FinPara
 	Si sumaDivisores = numero Entonces
-		Escribir "El número ", numero, " es un número perfecto."
+		Escribir "El nÃºmero ", numero, " es un nÃºmero perfecto."
 	Sino
-		Escribir "El número ", numero, " no es un número perfecto."
+		Escribir "El nÃºmero ", numero, " no es un nÃºmero perfecto."
 	FinSi
 	// salida de los resultados
 FinFuncion
 //...................................................................................................
-// Dado un número N determine si es un número primo
+// Dado un nÃºmero N determine si es un nÃºmero primo
 FUNCION EJC_19
 	// entrada de datos
 	Definir numero, divisor, contador Como Entero
-	Definir esPrimo Como Lógico	
-	Escribir "Ingrese un número: " // pedimos al usuario un numero 
+	Definir esPrimo Como LÃ³gico	
+	Escribir "Ingrese un nÃºmero: " // pedimos al usuario un numero 
 	Leer numero
 	// proceso de datos
 	Si numero <= 1 Entonces
@@ -542,26 +542,26 @@ FUNCION EJC_19
 		FinMientras
 	FinSi
 	Si esPrimo Entonces
-		Escribir "El número ", numero, " es un número primo."
+		Escribir "El nÃºmero ", numero, " es un nÃºmero primo."
 	Sino
-		Escribir "El número ", numero, " no es un número primo."
+		Escribir "El nÃºmero ", numero, " no es un nÃºmero primo."
 	FinSi
 	// salida de los resultados
 FinFuncion
 //...................................................................................................
-// Dado dos números determinar si son   primos gemelos.
+// Dado dos nÃºmeros determinar si son   primos gemelos.
 funcion EJC_20
 	// entrada de datos
 	Definir numero1, numero2, diferencia, i Como Entero
-	Definir esPrimo1, esPrimo2 Como Lógico
-	Escribir "Ingrese el primer número: "
+	Definir esPrimo1, esPrimo2 Como LÃ³gico
+	Escribir "Ingrese el primer nÃºmero: "
 	Leer numero1
-	Escribir "Ingrese el segundo número: "
+	Escribir "Ingrese el segundo nÃºmero: "
 	Leer numero2
 	esPrimo1 = Verdadero
 	esPrimo2 = Verdadero
 	i = 2
-	// Verificar si el primer número es primo
+	// Verificar si el primer nÃºmero es primo
 	Mientras i <= numero1 / 2 Hacer
 		Si numero1 % i = 0 Entonces
 			esPrimo1 = Falso
@@ -569,7 +569,7 @@ funcion EJC_20
 		i = i + 1
 	FinMientras
 	i = 2
-	// Verificar si el segundo número es primo
+	// Verificar si el segundo nÃºmero es primo
 	Mientras i <= numero2 / 2 Hacer
 		Si numero2 % i = 0 Entonces
 			esPrimo2 = Falso
@@ -578,18 +578,18 @@ funcion EJC_20
 	FinMientras
 	diferencia = Abs(numero1 - numero2)
 	Si esPrimo1 Y esPrimo2 Y diferencia = 2 Entonces
-		Escribir "Los números", numero1, " y", numero2, " son primos gemelos."
+		Escribir "Los nÃºmeros", numero1, " y", numero2, " son primos gemelos."
 	Sino
-		Escribir "Los números", numero1, " y", numero2, " no son primos gemelos."
+		Escribir "Los nÃºmeros", numero1, " y", numero2, " no son primos gemelos."
 	FinSi
 FinFuncion
 //...................................................................................................
-// Dado dos números determinar si son primos amigos
+// Dado dos nÃºmeros determinar si son primos amigos
 Funcion EJC_21
 	Definir numero1, numero2, sumaDivisores1, sumaDivisores2, divisor Como Entero
-	Escribir "Ingrese el primer número: "
+	Escribir "Ingrese el primer nÃºmero: "
 	Leer numero1
-	Escribir "Ingrese el segundo número: "
+	Escribir "Ingrese el segundo nÃºmero: "
 	Leer numero2
 	sumaDivisores1 = 0
 	sumaDivisores2 = 0
@@ -605,16 +605,16 @@ Funcion EJC_21
 		FinSi
 	FinPara
 	Si sumaDivisores1 = numero2 Y sumaDivisores2 = numero1 Entonces
-		Escribir "Los números", numero1, " y", numero2, " son primos amigos."
+		Escribir "Los nÃºmeros", numero1, " y", numero2, " son primos amigos."
 	Sino
-		Escribir "Los números", numero1, " y", numero2, " no son primos amigos."
+		Escribir "Los nÃºmeros", numero1, " y", numero2, " no son primos amigos."
 	FinSi
 FinFuncion
 //..................................................................................................................................
 
 //ARREGLOS Y CADENAS
 
-//¯Fabiola¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯FabiolaÂ¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 
 
 Funcion Ejercicio_22
@@ -628,10 +628,10 @@ Funcion Ejercicio_22
     Leer n
     
     Repetir
-        Escribir "Menú:"
+        Escribir "MenÃº:"
         Escribir "1. Mostrar secuencia"
         Escribir "2. Salir"
-        Escribir "Seleccione una opción:"
+        Escribir "Seleccione una opciÃ³n:"
         Leer opcion
         Limpiar Pantalla
         Segun opcion Hacer
@@ -644,20 +644,20 @@ Funcion Ejercicio_22
             2:
                 Escribir "Saliendo del programa."
             Otro:
-                Escribir "Opción no válida. Intente de nuevo."
+                Escribir "OpciÃ³n no vÃ¡lida. Intente de nuevo."
         Fin Segun
     Hasta Que opcion = 2
 FinFuncion
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 Funcion Ejercicio_23
 	//Implementa un programa que calcule el promedio de los elementos pares e impares en un 
-	//arreglo de números enteros y los copie en otro arreglo.
+	//arreglo de nÃºmeros enteros y los copie en otro arreglo.
 	//Ejemplo:
 	//arreglo[2,3,4,7] areglo2[3,5]
     Definir tamano, i, num como Entero
     Definir productoPares, productoImpares como Entero
     
-    Escribir "Ingrese el tamaño del arreglo:"
+    Escribir "Ingrese el tamaÃ±o del arreglo:"
     Leer tamano
     
     Definir arreglotamano, pares, impares como Entero
@@ -680,25 +680,25 @@ Funcion Ejercicio_23
     Escribir "Producto de elementos en posiciones pares:", productoPares
     Escribir "Producto de elementos en posiciones impares:", productoImpares
 FinFuncion
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 Funcion Ejercicio_24
-    // Declaración de variables
+    // DeclaraciÃ³n de variables
     Definir n, i, opcion como Entero
     Definir respuesta como Real
     
-    // Inicialización de variables
+    // InicializaciÃ³n de variables
     n <- 6
     respuesta <- 20
     
-    // Menú principal
+    // MenÃº principal
     Repetir
-        Escribir "Menú:"
+        Escribir "MenÃº:"
         Escribir "1. Mostrar secuencia"
         Escribir "2. Salir"
-        Escribir "Seleccione una opción:"
+        Escribir "Seleccione una opciÃ³n:"
         Leer opcion
         
-        // Selección de opción
+        // SelecciÃ³n de opciÃ³n
         Segun opcion Hacer
             1:
                 // Mostrar secuencia
@@ -715,18 +715,18 @@ Funcion Ejercicio_24
                 // Salir del programa
                 Escribir "Saliendo del programa."
             Otro:
-                // Opción no válida
-                Escribir "Opción no válida. Intente de nuevo."
+                // OpciÃ³n no vÃ¡lida
+                Escribir "OpciÃ³n no vÃ¡lida. Intente de nuevo."
         Fin Segun
     Hasta Que opcion = 2
 FinFuncion
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 Funcion Ejercicio_25
     // Declarar variables
     Definir n, i, j, k Como Entero
     Definir arregloOriginal, arregloPositivos, arregloNegativos Como Real
 	
-    // Entrada de datos y validar tamaño del arreglo
+    // Entrada de datos y validar tamaÃ±o del arreglo
 	Escribir "Ingrese la cantidad de elementos del arreglo (menor o igual a 100):"
 	Leer n
 	Escribir "Ingrese los elementos del arreglo:"
@@ -749,160 +749,160 @@ Funcion Ejercicio_25
 	
 	// Salida de resultados
 	Si j > 1 Entonces
-		Escribir "Arreglo de números positivos:"
+		Escribir "Arreglo de nÃºmeros positivos:"
 		Para i = 1 Hasta j - 1
 			Escribir arregloPositivos
 		FinPara
 	Sino
-		Escribir "No hay números positivos en el arreglo."
+		Escribir "No hay nÃºmeros positivos en el arreglo."
 	FinSi
 	
 	Si k > 1 Entonces
-		Escribir "Arreglo de números negativos:"
+		Escribir "Arreglo de nÃºmeros negativos:"
 		Para i = 1 Hasta k - 1
 			Escribir arregloNegativos
 		FinPara
 	Sino
-		Escribir "No hay números negativos en el arreglo."
+		Escribir "No hay nÃºmeros negativos en el arreglo."
 	FinSi
 FinFuncion
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 Funcion Ejercicio_26
-    // Declaración de variables
+    // DeclaraciÃ³n de variables
     Definir num, sumaPares, contMultiplos3, opcion como Entero
     
-    // Inicialización de variables
+    // InicializaciÃ³n de variables
     sumaPares <- 0
     contMultiplos3 <- 0
     
-    // Menú principal
+    // MenÃº principal
     Repetir
-        Escribir "Menú:"
-        Escribir "1. Ingresar secuencia de números"
-        Escribir "2. Mostrar suma de pares y cantidad de múltiplos de 3"
+        Escribir "MenÃº:"
+        Escribir "1. Ingresar secuencia de nÃºmeros"
+        Escribir "2. Mostrar suma de pares y cantidad de mÃºltiplos de 3"
         Escribir "3. Salir"
-        Escribir "Seleccione una opción:"
+        Escribir "Seleccione una opciÃ³n:"
         Leer opcion
         
-        // Selección de opción
+        // SelecciÃ³n de opciÃ³n
         Segun opcion Hacer
             1:
-                // Ingresar secuencia de números hasta que se ingrese un negativo
+                // Ingresar secuencia de nÃºmeros hasta que se ingrese un negativo
                 Mientras Verdadero
-                    Escribir "Ingrese un número (ingrese un número negativo para terminar):"
+                    Escribir "Ingrese un nÃºmero (ingrese un nÃºmero negativo para terminar):"
                     Leer num
                     
                     Si num < 0 Entonces
-                        // Salir del bucle si se ingresa un número negativo
+                        // Salir del bucle si se ingresa un nÃºmero negativo
                         //romper
                     Fin Si
                     
-                    // Verificar si el número es par
+                    // Verificar si el nÃºmero es par
                     Si num MOD 2 = 0 Entonces
                         sumaPares <- sumaPares + num
                     Fin Si
                     
-                    // Verificar si el número es múltiplo de 3
+                    // Verificar si el nÃºmero es mÃºltiplo de 3
                     Si num MOD 3 = 0 Entonces
                         contMultiplos3 <- contMultiplos3 + 1
                     Fin Si
                 Fin Mientras
             2:
-                // Mostrar suma de pares y cantidad de múltiplos de 3
-                Escribir "Suma de números pares:", sumaPares
-                Escribir "Cantidad de números múltiplos de 3:", contMultiplos3
+                // Mostrar suma de pares y cantidad de mÃºltiplos de 3
+                Escribir "Suma de nÃºmeros pares:", sumaPares
+                Escribir "Cantidad de nÃºmeros mÃºltiplos de 3:", contMultiplos3
             3:
                 // Salir del programa
                 Escribir "Saliendo del programa."
             Otro:
-                // Opción no válida
-                Escribir "Opción no válida. Intente de nuevo."
+                // OpciÃ³n no vÃ¡lida
+                Escribir "OpciÃ³n no vÃ¡lida. Intente de nuevo."
         Fin Segun
     Hasta Que opcion = 3
 FinFuncion
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 Funcion Ejercicio_27
-    // Declaración de variables
+    // DeclaraciÃ³n de variables
     Definir num, sumaPares, contMultiplos3, opcion como Entero
     
-    // Inicialización de variables
+    // InicializaciÃ³n de variables
     sumaPares <- 0
     contMultiplos3 <- 0
     
-    // Menú principal
+    // MenÃº principal
     Repetir
-        Escribir "Menú:"
-        Escribir "1. Ingresar secuencia de números"
-        Escribir "2. Mostrar suma de pares y cantidad de múltiplos de 3"
+        Escribir "MenÃº:"
+        Escribir "1. Ingresar secuencia de nÃºmeros"
+        Escribir "2. Mostrar suma de pares y cantidad de mÃºltiplos de 3"
         Escribir "3. Salir"
-        Escribir "Seleccione una opción:"
+        Escribir "Seleccione una opciÃ³n:"
         Leer opcion
         
-        // Selección de opción
+        // SelecciÃ³n de opciÃ³n
         Segun opcion Hacer
             1:
-                // Ingresar secuencia de números hasta que se ingrese un negativo
+                // Ingresar secuencia de nÃºmeros hasta que se ingrese un negativo
                 Mientras Verdadero
-                    Escribir "Ingrese un número (ingrese un número negativo para terminar):"
+                    Escribir "Ingrese un nÃºmero (ingrese un nÃºmero negativo para terminar):"
                     Leer num
                     
                     Si num < 0 Entonces
-                        // Salir del bucle si se ingresa un número negativo
+                        // Salir del bucle si se ingresa un nÃºmero negativo
                         //romper
                     Fin Si
                     
-                    // Verificar si el número es par
+                    // Verificar si el nÃºmero es par
                     Si num MOD 2 = 0 Entonces
                         sumaPares <- sumaPares + num
                     Fin Si
                     
-                    // Verificar si el número es múltiplo de 3
+                    // Verificar si el nÃºmero es mÃºltiplo de 3
                     Si num MOD 3 = 0 Entonces
                         contMultiplos3 <- contMultiplos3 + 1
                     Fin Si
                 Fin Mientras
             2:
-                // Mostrar suma de pares y cantidad de múltiplos de 3
-                Escribir "Suma de números pares:", sumaPares
-                Escribir "Cantidad de números múltiplos de 3:", contMultiplos3
+                // Mostrar suma de pares y cantidad de mÃºltiplos de 3
+                Escribir "Suma de nÃºmeros pares:", sumaPares
+                Escribir "Cantidad de nÃºmeros mÃºltiplos de 3:", contMultiplos3
             3:
                 // Salir del programa
                 Escribir "Saliendo del programa."
             Otro:
-                // Opción no válida
-                Escribir "Opción no válida. Intente de nuevo."
+                // OpciÃ³n no vÃ¡lida
+                Escribir "OpciÃ³n no vÃ¡lida. Intente de nuevo."
         Fin Segun
     Hasta Que opcion = 3
 FinFuncion
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 Funcion Ejercicio_28
-    // Declaración de variables
+    // DeclaraciÃ³n de variables
     Definir num, contMay5, sumaMultiplos5, opcion como Entero
-    // Inicialización de variables
+    // InicializaciÃ³n de variables
     contMay5 <- 0
     sumaMultiplos5 <- 0
-    // Menú principal
+    // MenÃº principal
     Repetir
-        Escribir "Menú:"
-        Escribir "1. Ingresar secuencia de números (ingrese un número par para terminar)"
-        Escribir "2. Mostrar cantidad de números mayores a 5 y suma de múltiplos de 5"
+        Escribir "MenÃº:"
+        Escribir "1. Ingresar secuencia de nÃºmeros (ingrese un nÃºmero par para terminar)"
+        Escribir "2. Mostrar cantidad de nÃºmeros mayores a 5 y suma de mÃºltiplos de 5"
         Escribir "3. Salir"
-        Escribir "Seleccione una opción:"
+        Escribir "Seleccione una opciÃ³n:"
         Leer opcion
-        // Selección de opción
+        // SelecciÃ³n de opciÃ³n
         Segun opcion Hacer
             1:
-                // Ingresar secuencia de números hasta que se ingrese un número par
+                // Ingresar secuencia de nÃºmeros hasta que se ingrese un nÃºmero par
                 Mientras Verdadero
-                    Escribir "Ingrese un número (ingrese un número par para terminar):"
+                    Escribir "Ingrese un nÃºmero (ingrese un nÃºmero par para terminar):"
                     Leer num
                     
                     Si num MOD 2 = 0 Entonces
-                        // Salir del bucle si se ingresa un número par
+                        // Salir del bucle si se ingresa un nÃºmero par
                         //Romper
                     Fin Si
                     
-                    // Analizar el número
+                    // Analizar el nÃºmero
                     Si num > 5 Entonces
                         contMay5 <- contMay5 + 1
                     Fin Si
@@ -912,49 +912,49 @@ Funcion Ejercicio_28
                     Fin Si
                 Fin Mientras
             2:
-                // Mostrar cantidad de números mayores a 5 y suma de múltiplos de 5
-                Escribir "Cantidad de números mayores a 5:", contMay5
-                Escribir "Suma de múltiplos de 5:", sumaMultiplos5
+                // Mostrar cantidad de nÃºmeros mayores a 5 y suma de mÃºltiplos de 5
+                Escribir "Cantidad de nÃºmeros mayores a 5:", contMay5
+                Escribir "Suma de mÃºltiplos de 5:", sumaMultiplos5
             3:
                 // Salir del programa
                 Escribir "Saliendo del programa."
             Otro:
-                // Opción no válida
-                Escribir "Opción no válida. Intente de nuevo."
+                // OpciÃ³n no vÃ¡lida
+                Escribir "OpciÃ³n no vÃ¡lida. Intente de nuevo."
         Fin Segun
     Hasta Que opcion = 3
 FinFuncion
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 Funcion Ejercicio_29
-    // Declaración de variables
+    // DeclaraciÃ³n de variables
     Definir num, sumaCuadrados, i, opcion como Entero
     Definir arreglo como Entero
     
-    // Inicialización de variables
+    // InicializaciÃ³n de variables
     i <- 1
     sumaCuadrados <- 0
     
-    // Menú principal
+    // MenÃº principal
     Repetir
-        Escribir "Menú:"
-        Escribir "1. Ingresar secuencia de números (ingrese 0 para terminar)"
+        Escribir "MenÃº:"
+        Escribir "1. Ingresar secuencia de nÃºmeros (ingrese 0 para terminar)"
         Escribir "2. Mostrar suma de cuadrados"
         Escribir "3. Salir"
-        Escribir "Seleccione una opción:"
+        Escribir "Seleccione una opciÃ³n:"
         Leer opcion
         
-        // Selección de opción
+        // SelecciÃ³n de opciÃ³n
         Segun opcion Hacer
             1:
-                // Ingresar secuencia de números hasta que se ingrese un 0
+                // Ingresar secuencia de nÃºmeros hasta que se ingrese un 0
                 Mientras Verdadero
-                    Escribir "Ingrese un número (ingrese 0 para terminar):"
+                    Escribir "Ingrese un nÃºmero (ingrese 0 para terminar):"
                     Leer num
                     Si num = 0 Entonces
                         // Salir del bucle si se ingresa un 0
                         //Romper
                     Fin Si
-                    // Almacenar el número en el arreglo
+                    // Almacenar el nÃºmero en el arreglo
                     //arreglo[i] <- num
                     i <- i + 1
                 Fin Mientras
@@ -963,7 +963,7 @@ Funcion Ejercicio_29
                 Escribir "Arreglo:"
                 Para i <- 1 Hasta i - 1 Hacer
                     Escribir arreglo
-                    // Sumar el cuadrado de cada número
+                    // Sumar el cuadrado de cada nÃºmero
                     sumaCuadrados <- sumaCuadrados + arreglo^2
                 Fin Para
                 Escribir "Suma de cuadrados:", sumaCuadrados
@@ -971,16 +971,16 @@ Funcion Ejercicio_29
                 // Salir del programa
                 Escribir "Saliendo del programa."
             Otro:
-                // Opción no válida
-                Escribir "Opción no válida. Intente de nuevo."
+                // OpciÃ³n no vÃ¡lida
+                Escribir "OpciÃ³n no vÃ¡lida. Intente de nuevo."
         Fin Segun
     Hasta Que opcion = 3
 FinFuncion
 
 
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 
-//¯BELEN¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯BELENÂ¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 Funcion Ejercicio_9
 	//Dado una frase indicar cuantas palabras tiene
 	//Defrinir variables
@@ -996,19 +996,19 @@ Funcion Ejercicio_9
 			palabras = palabras + 1
 		FinSi
 	FinPara
-	palabras = palabras + 1  // Agregar 1 para contar la última palabra
+	palabras = palabras + 1  // Agregar 1 para contar la Ãºltima palabra
 	Escribir "La frase tiene ", palabras, " palabras."
 FinFuncion
 //__________________________________________________________________________________________________________
 Funcion Ejercicio_10
-	//Leer una secuencia de números hasta que se ingrese un numero negativo
+	//Leer una secuencia de nÃºmeros hasta que se ingrese un numero negativo
 	//y almacenarlos en arreglo. Se pide recorrer el arreglo y cambiar cada
 	//elemento del arreglo por su doble.
 	Definir numer Como Entero
     Definir i Como Entero
     Definir num Como real
 	Dimension numer(100)
-	Escribir "Ingrese una secuencia de números (Ingrese un número negativo para detenerse):"
+	Escribir "Ingrese una secuencia de nÃºmeros (Ingrese un nÃºmero negativo para detenerse):"
     Mientras num >= 0 Hacer
 		numer[i] = num
 		i = i + 1
@@ -1034,12 +1034,12 @@ FinFuncion
 //__________________________________________________________________________________________________________________________
 Funcion Ejercicio_11
 	//Leer una secuencia de caracteres hasta que se ingrese un punto.
-	//Deberá mostrar cuantos "x" se ingresaron
+	//DeberÃ¡ mostrar cuantos "x" se ingresaron
 	Definir contadorX Como Entero
     contador=0
     Definir letras Como Caracter
 	Escribir "Ingrese letras:"
-	Escribir "Ingrese un ¨.¨ para finalizar"
+	Escribir "Ingrese un Â¨.Â¨ para finalizar"
     Repetir
         Leer letras
         Si letras = "x" Entonces
@@ -1047,20 +1047,20 @@ Funcion Ejercicio_11
         Fin Si
     Hasta Que letras = "."
 	
-    Escribir "Se ingresaron ", contador " letras ¨x¨"
+    Escribir "Se ingresaron ", contador " letras Â¨xÂ¨"
 FinFuncion
 //_______________________________________________________________________________________________________________________________
 Funcion Ejercicio_12
-	//Leer una secuencia de números hasta que se ingrese un 0
+	//Leer una secuencia de nÃºmeros hasta que se ingrese un 0
 	//y almacenarlos en arreglo. Se pide recorrer el arreglo y pasar a otro
-	//arreglo solo los números pares de cada elemento del arreglo1
-	// Definimos otro arreglo para los números pares
+	//arreglo solo los nÃºmeros pares de cada elemento del arreglo1
+	// Definimos otro arreglo para los nÃºmeros pares
     Definir numero, i, j Como Entero
 	Dimension arreglo1(100)
 	Dimension arreglo2(100)
-    i <- 0  // Inicializamos el índice del primer arreglo
+    i <- 0  // Inicializamos el Ã­ndice del primer arreglo
 	
-    Escribir "Ingrese una secuencia de números (0 para terminar):"
+    Escribir "Ingrese una secuencia de nÃºmeros (0 para terminar):"
 	
     Repetir
         Leer numero
@@ -1068,25 +1068,25 @@ Funcion Ejercicio_12
         i <- i + 1
     Hasta Que numero = 0
 	
-    i <- 0  // Reiniciamos el índice para recorrer el primer arreglo
-    j <- 0  // Inicializamos el índice del segundo arreglo
+    i <- 0  // Reiniciamos el Ã­ndice para recorrer el primer arreglo
+    j <- 0  // Inicializamos el Ã­ndice del segundo arreglo
 	
     Mientras i < 100 Y arreglo1[i] <> 0
         Si arreglo1[i] MOD 2 = 0 Entonces  // Verificamos si es par
-            arreglo2[j] <- arreglo1[i]  // Copiamos el número par al segundo arreglo
+            arreglo2[j] <- arreglo1[i]  // Copiamos el nÃºmero par al segundo arreglo
             j <- j + 1
         Fin Si
         i <- i + 1
     Fin Mientras
 	
-    Escribir "los números pares son:"
+    Escribir "los nÃºmeros pares son:"
     Para i Desde 0 Hasta j - 1
         Escribir arreglo2[i]
     Fin Para
 FinFuncion
 //_________________________________________________________________________________________________________________
 Funcion Ejercicio_13
-	//Dado dos números presentar los valores mayores a 5 entre ellos incluidos el numero inicial
+	//Dado dos nÃºmeros presentar los valores mayores a 5 entre ellos incluidos el numero inicial
 	//y final
 	Definir num1, num2 Como Real
 	Escribir "Ingrese el primer numero:"
@@ -1157,12 +1157,12 @@ Funcion Ejercicio_14
 FinFuncion
 //_________________________________________________________________________________________________________
 Funcion Ejercicio_15
-	//Dado dos números presentar los valores Impares comprendidos entre ellos(excluidos el
+	//Dado dos nÃºmeros presentar los valores Impares comprendidos entre ellos(excluidos el
 	//valor inicial y final
 	Definir num1, num2 Como Entero
-    Escribir "Ingrese el número inicial:"
+    Escribir "Ingrese el nÃºmero inicial:"
     Leer num1
-    Escribir "Ingrese el número final:"
+    Escribir "Ingrese el nÃºmero final:"
     Leer num2
 	
     Si num1 < num2 Entonces
@@ -1206,14 +1206,14 @@ Funcion Ejercicio_16
 	
     Si canSueldos > 0 Entonces
         promSueldos <- sumaSueldos / canSueldos
-        Escribir "Sueldo más alto:", sueldoAlto
+        Escribir "Sueldo mÃ¡s alto:", sueldoAlto
         Escribir "Cantidad de sueldos:", canSueldos
         Escribir "Promedio de sueldos:", promSueldos
     Fin Si
 FinFuncion
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 
-//SCARLET¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//SCARLETÂ¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 Funcion frase
 	// Programa para indicar la frase de mayor longitud
 	
@@ -1242,7 +1242,7 @@ Funcion frase
 	fin si 
 FinFuncion
 
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 
 Funcion p
 	//Indicar cuantas ,.;: hay en una cadena
@@ -1273,7 +1273,7 @@ Funcion p
 	Escribir "punto y coma :" , conatdorcomapun
 	Escribir "2 puntos :", contador2punto
 FinFuncion
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 
 Funcion  ContarVocalesConsonantesDigitos
 	Definir cadena Como Cadena
@@ -1285,7 +1285,7 @@ Funcion  ContarVocalesConsonantesDigitos
 	Escribir "Ingrese una cadena:"
 	Leer caden
 	
-	juan = Minusculas(caden)  // Convertir la cadena a minúsculas para simplificar la comparación
+	juan = Minusculas(caden)  // Convertir la cadena a minÃºsculas para simplificar la comparaciÃ³n
 	juana = Longitud(caden) 
 	Para i = 1 Hasta juana Hacer
 		
@@ -1305,12 +1305,12 @@ Funcion  ContarVocalesConsonantesDigitos
 		
 	FinPara
 	
-	Escribir "Número de vocales: ", contadorVocales
-	Escribir "Número de consonantes: ", contadorConsonantes
-	Escribir "Número de dígitos: ", contadorDigitos
+	Escribir "NÃºmero de vocales: ", contadorVocales
+	Escribir "NÃºmero de consonantes: ", contadorConsonantes
+	Escribir "NÃºmero de dÃ­gitos: ", contadorDigitos
 FinFuncion
 
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 Funcion espacios
 	Definir oracion como cadena
 	Definir espacio, i, cantidad Como Entero
@@ -1328,7 +1328,7 @@ Funcion espacios
 	Escribir "la frase tiene: ", espacio + 1 ," palabras "
 FinFuncion
 
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 
 Funcion sumar
 	Definir n, suma Como Entero
@@ -1368,7 +1368,7 @@ Funcion pl
 FinFuncion
 
 
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 
 
 funcion MostrarPosicionCaracter
@@ -1380,7 +1380,7 @@ funcion MostrarPosicionCaracter
     Escribir "Ingresa una cadena: "
     Leer cadena
 	
-    Escribir "Ingresa el carácter que quieres buscar: "
+    Escribir "Ingresa el carÃ¡cter que quieres buscar: "
     Leer caracterBuscado
 	
 	cadena <- Minusculas(cadena)
@@ -1399,14 +1399,13 @@ funcion MostrarPosicionCaracter
     Si encontre   = Verdadero Entonces
 		Escribir "Se econtro en la sigueite posiscio " + caracteraPresentar;
 	SiNo
-		Escribir "El carácter ", caracterBuscado, " no se encuentra en la cadena."
+		Escribir "El carÃ¡cter ", caracterBuscado, " no se encuentra en la cadena."
     FinSi
 	
 FinFuncion
 
-//¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+//Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯Â¯
 
-FinFuncion
 
 
 
